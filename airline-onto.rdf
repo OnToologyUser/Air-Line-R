@@ -1,0 +1,2005 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/def/airlinereviews#"
+     xml:base="https://w3id.org/def/airlinereviews"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="https://w3id.org/def/airlinereviews">
+        <owl:versionIRI rdf:resource="https://w3id.org/def/airlinereviews/1.0.0"/>
+        <dc:description xml:lang="en">An ontology dedicated to describing flight satisfaction surveys.</dc:description>
+        <dc:title xml:lang="en">Airline Satisfaction Survey Ontology</dc:title>
+        <owl:versionIRI xml:lang="en">https://w3id.org/def/airlines/1.0.0</owl:versionIRI>
+        <owl:versionInfo xml:lang="en">Initial version of the ontology with the incorporation of the following datasets: 
+
+KAGGLE:
+-------------
+https://www.kaggle.com/datasets/pranaybshah/qatar-airways-reviews
+
+https://www.kaggle.com/datasets/cristaliss/ryanair-reviews-ratings
+
+============================================================
+
+DBPEDIA:
+--------------
+https://dbpedia.org/page/Category:Qatar_Airways
+
+https://dbpedia.org/page/Category:Ryanair</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionIRI -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionIRI"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#fromOrigin -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#fromOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">An object property that permit to define an Origin for a specific Flight.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">from Origin</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#hasAircraft -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#hasAircraft">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Aircraft"/>
+        <rdfs:comment xml:lang="en">An object property that permit to define an Aircraft for a specific Flight.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://dbpedia.org/ontology/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has Aircraft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#hasAuthor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">An object property that permit to define an Author for a specific Review.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has Author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#hasBusinessClass -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#hasBusinessClass">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">An object property that permit to define a Business Class Seat Type for a specific Flight.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has Business Class</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#hasComment -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#hasComment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">An object property that permit to define a Comment for a specific Review.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has Comment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#hasCommentTitle -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#hasCommentTitle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">An object property that permit to define a Comment Title for a specific Review.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has Comment Title</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#hasCountry -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#hasCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Country"/>
+        <rdfs:comment xml:lang="en">An object property that represents the Country of a Passenger.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://dbpedia.org/ontology/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has Country</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#hasEconomyClass -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#hasEconomyClass">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">An object property that permit to define a Economy Class Seat Type for a specific Flight.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has Economy Class</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#hasFirstClass -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#hasFirstClass">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">An object property that permit to define a First Class Seat Type for a specific Flight.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has First Class</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#hasFlight -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#hasFlight">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/airlinereviews#Passenger"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/airlinereviews#Flight"/>
+        <rdfs:comment xml:lang="en">An object property that permit to define a Flight for a specific Review.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has Flight</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#hasQatarAirline -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#hasQatarAirline">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">An object property that permit to define a Qatar Airline for a specific Aircraft.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has Qatar Airline</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#hasReview -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#hasReview">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/airlinereviews#Flight"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/airlinereviews#Review"/>
+        <rdfs:comment xml:lang="en">An object property that represents the Reviews that an Airline have.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has Review</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#hasRyanairAirline -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#hasRyanairAirline">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">An object property that permit to define a Ryanair Airline for a specific Aircraft.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has Ryanair Airline</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#hasSentimentAnalysis -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#hasSentimentAnalysis">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">An object property that allows Sentiment Analysis to be defined for specific Passenger.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has Sentiment Analysis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#isPassenger -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#isPassenger">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">An object property that permit to define a Passenger for a specific Review.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">is Passenger</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#toDestination -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/airlinereviews#toDestination">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">An object property that permit to define a Destination for a specific Flight.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">to Destination</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#age -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#age">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Data property that represents the Age of an Entity.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">age</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#cabinStaffService -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#cabinStaffService">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">A data property that indicates what the Cabin Staff Service is.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">cabin Staff Service</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#dateFlown -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#dateFlown">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A data property that permit to identify the Date Flown for an Entity.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">date Flown</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#datePublished -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#datePublished">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A data property that permit to identify the Date Published for an Entity.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">date Published</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#foodAndBeverages -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#foodAndBeverages">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">A data property that indicates the availability of Food &amp; Beverages.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">food and Beverages</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#gender -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#gender">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Data property that represents the Gender of an Entity.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">gender</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#groundService -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#groundService">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">A data property that indicates the availability of Ground Service.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ground Service</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#id -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#id">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A data property that permit to define an ID for an Entity</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#inflightEntertainment -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#inflightEntertainment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">A data property that indicates the availability of In-flight Entertainment.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">inflight Entertainment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#name -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Data property that represents the Name of an Entity.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#nationality -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#nationality">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Data property that represents the Nationality of an Entity.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">nationality</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#rating -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#rating">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/airlinereviews#Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">A data property that represents the average Rating given to the Flight by the passengers.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">rating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#recommended -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#recommended">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">A data property indicating whether the passenger would Recommend this Flight to others.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">recommended</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#seatComfort -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#seatComfort">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">A data property that indicates how Comfortable the Seats are.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">seat Comfort</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#tripVerificationStatus -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#tripVerificationStatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">A data property that indicates whether the trip is Verified or not.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">trip Verification Status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#valueForMoney -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#valueForMoney">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">A data property that refers the specific Value for a Currency.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">value for Money</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#wifiAndConnectivity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/airlinereviews#wifiAndConnectivity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">A data property that indicates the presence of WiFi.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">wifi and Connectivity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/Aircraft -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Aircraft">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">An aircraft is a vehicle that is able to fly by gaining support from the air. It counters the force of gravity by using either static lift or by using the dynamic lift of an airfoil, or in a few cases the downward thrust from jet engines. Common examples of aircraft include airplanes, helicopters, airships (including blimps), gliders, paramotors, and hot air balloons.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://dbpedia.org/ontology/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Aircraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Airline -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Airline">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">An airline is a company that provides air transport services for traveling passengers and freight. Airlines use aircraft to supply these services and may form partnerships or alliances with other airlines for codeshare agreements, in which they both offer and operate the same flight. Generally, airline companies are recognized with an air operating certificate or license issued by a governmental aviation body. Airlines may be scheduled or charter operators.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://dbpedia.org/ontology/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Airline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Country -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Country">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#Passenger"/>
+        <rdfs:comment xml:lang="en">A country is a distinct part of the world, such as a state, nation, or other political entity. It may be a sovereign state or make up one part of a larger state. For example, the country of Japan is an independent, sovereign state, while the country of Wales is a component of a multi-part sovereign state, the United Kingdom. A country may be a historically sovereign area (such as Korea), a currently sovereign territory with a unified government (such as Senegal), or a non-sovereign geographic region associated with certain distinct political, ethnic, or cultural characteristics (such as the Basque Country).</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://dbpedia.org/ontology/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Aircraft -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#Aircraft">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Aircraft"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#hasQatarAirline"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/airlinereviews#QatarAirways"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#hasRyanairAirline"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/airlinereviews#Ryanair"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#id"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#seatComfort"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Machine that is able to fly by gaining support from the air other than the reactions of the air against the earth’s surface.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Aircraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Airline -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#Airline">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Airline"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#id"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Airlines are the entities that own the planes that use your airport.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Airline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Author -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#Author">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#Review"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#hasBusinessClass"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/airlinereviews#BusinessClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#hasEconomyClass"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/airlinereviews#EconomyClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#hasFirstClass"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/airlinereviews#FirstClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#isPassenger"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/airlinereviews#Passenger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#id"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">the &apos;author&apos; of an airline review is usually the individual passenger who wrote the review.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Author</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Business -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#Business">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#PassengerType"/>
+        <rdfs:comment xml:lang="en">Business Passenger Type.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Business</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#BusinessClass -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#BusinessClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#SeatType"/>
+        <rdfs:comment xml:lang="en">Business Class Seat Type.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Business Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Comment -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#Comment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#Review"/>
+        <rdfs:comment xml:lang="en">Textual assessments submitted by passengers following their flight experiences.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Comment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#CommentTitle -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#CommentTitle">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#Review"/>
+        <rdfs:comment xml:lang="en">Title of a given comment.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Comment Title</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Country -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#Country">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Country"/>
+        <rdfs:comment xml:lang="en">Distinct territorial body or political entity.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Destination -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#Destination">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#Flight"/>
+        <rdfs:comment xml:lang="en">In the context of air travel, the destination is the airport where the flight ends.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Destination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#EconomyClass -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#EconomyClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#SeatType"/>
+        <rdfs:comment xml:lang="en">Economy Class Seat Type.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Economy Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#FamilyLeisure -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#FamilyLeisure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#PassengerType"/>
+        <rdfs:comment xml:lang="en">Family Leisure Passenger Type.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Family Leisure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#FirstClass -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#FirstClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#SeatType"/>
+        <rdfs:comment xml:lang="en">First Class Seat Type.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">First Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Flight -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#Flight">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#hasReview"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/airlinereviews#Review"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#hasAircraft"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/airlinereviews#Aircraft"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Flight or flying is the process by which an object moves through a space without contacting any planetary surface, either within an atmosphere (i.e. air flight or aviation) or through the vacuum of outer space (i.e. spaceflight). This can be achieved by generating aerodynamic lift associated with gliding or propulsive thrust, aerostatically using buoyancy, or by ballistic movement.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Flight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#NegativeSentiments -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#NegativeSentiments">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#SentimentAnalysis"/>
+        <rdfs:comment xml:lang="en">Represents the Passengers who have expressed negative emotions or sentiments. This could include feelings of dissatisfaction, frustration, or disappointment about their flight experience.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Negative Sentiments</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#NeutralSentiments -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#NeutralSentiments">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#SentimentAnalysis"/>
+        <rdfs:comment xml:lang="en">Represents the Passengers who have expressed neutral emotions or sentiments. This could include Passengers who have neither positive nor negative feelings about their flight experience, or those who have not expressed any specific sentiment.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Neutral Sentiments</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Origin -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#Origin">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#Flight"/>
+        <rdfs:comment xml:lang="en">In the context of air travel, the origin is the airport where the flight begins.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Passenger -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#Passenger">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#hasFlight"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/airlinereviews#Flight"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#hasReview"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/airlinereviews#Review"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/airlinereviews#hasAircraft"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/airlinereviews#Aircraft"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A passenger (also abbreviated as pax) is a person who travels in a vehicle, but does not bear any responsibility for the tasks required for that vehicle to arrive at its destination or otherwise operate the vehicle, and is not a steward. The vehicles may be bicycles, buses, passenger trains, airliners, ships, ferryboats, and other methods of transportation.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Passenger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#PassengerType -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#PassengerType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#Passenger"/>
+        <rdfs:comment xml:lang="en">In the context of airlines, &apos;Passenger Type&apos; refers to the different categories of passengers that can travel with an airline.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Passenger Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#QatarAirways -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#QatarAirways">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#Airline"/>
+        <rdfs:comment xml:lang="en">Qatar Airways Company Q.C.S.C. operating as Qatar Airways, is the flag carrier of Qatar.Headquartered in the Qatar Airways Tower in Doha, the airline operates a hub-and-spoke network, flying to over 170 international destinations across five continents from its base at Hamad International Airport. The airline currently operates a fleet of more than 200 aircraft. Qatar Airways Group employs more than 43,000 people. The carrier has been a member of the Oneworld alliance since October 2013, and the official company slogan has been &quot;Going Places Together&quot; since 2015.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Qatar Airways</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Review -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#Review">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Airline reviews are evaluations or feedback given by passengers about their experiences with a particular airline. These reviews can cover various aspects of the flight experience, including the quality of the airline’s service, the comfort of the seats, the food and beverages offered, the friendliness of the staff, and the punctuality of the flights.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Ryanair -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#Ryanair">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#Airline"/>
+        <rdfs:comment xml:lang="en">Ryanair Holdings PLC is an Irish ultra low-cost carrier group headquartered in Swords, Dublin, Ireland. The company includes the subsidiaries Ryanair DACTooltip Designated activity company, Malta Air, Buzz, Lauda Europe and Ryanair UK. Ryanair DAC, the oldest airline of the group, was founded in 1984. Ryanair Holdings was established in 1996 as a holding company for Ryanair with the two companies having the same board of directors and executive officers. In 2019 the transition began from the airline Ryanair and its subsidiaries into separate sister airlines under the holding company. Later in 2019 Malta Air joined Ryanair Holdings.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Ryanair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#SeatType -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#SeatType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#Flight"/>
+        <rdfs:comment xml:lang="en">Airline seat types refer to the different categories of seats available on an airplane.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Seat Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#SentimentAnalysis -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#SentimentAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Represents the process of determining the emotional tone behind a series of words. This is used to gain an understanding of the attitudes, opinions, and emotions of the individuals, i.e., Passengers in this context.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Sentiment Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#SoloLeisure -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#SoloLeisure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#PassengerType"/>
+        <rdfs:comment xml:lang="en">Solo Leisure Passenger Type.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Solo Leisure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#positiveSentiments -->
+
+    <owl:Class rdf:about="https://w3id.org/def/airlinereviews#positiveSentiments">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/airlinereviews#SentimentAnalysis"/>
+        <rdfs:comment xml:lang="en">Represents the Passengers who have expressed positive emotions or sentiments. This could include feelings of happiness, satisfaction, or enjoyment about their flight experience.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Positive Sentiments</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#A350 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#A350">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Aircraft"/>
+        <hasQatarAirline rdf:resource="https://w3id.org/def/airlinereviews#A350"/>
+        <name>A350</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Aircraft&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">A350</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#A350-1000 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#A350-1000">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Aircraft"/>
+        <hasQatarAirline rdf:resource="https://w3id.org/def/airlinereviews#A350-1000"/>
+        <name>A350-1000</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Aircraft&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">A350-1000</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#A380 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#A380">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Aircraft"/>
+        <hasQatarAirline rdf:resource="https://w3id.org/def/airlinereviews#A380"/>
+        <name>A380</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Aircraft&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">A380</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#A380-800 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#A380-800">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Aircraft"/>
+        <hasQatarAirline rdf:resource="https://w3id.org/def/airlinereviews#A380-800"/>
+        <name>A380-800</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Aircraft&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">A380-800</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Albania -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Albania">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Country"/>
+        <name>Albania</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Passenger Country&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Albania</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Alicante -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Alicante">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Destination"/>
+        <name>Alicante</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Flight Destination&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Alicante</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Alwaleed_Althani -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Alwaleed_Althani">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Author"/>
+        <fromOrigin rdf:resource="https://w3id.org/def/airlinereviews#Doha"/>
+        <hasAircraft rdf:resource="https://w3id.org/def/airlinereviews#A380-800"/>
+        <hasCountry rdf:resource="https://w3id.org/def/airlinereviews#Qatar"/>
+        <hasFirstClass rdf:resource="https://w3id.org/def/airlinereviews#Alwaleed_Althani"/>
+        <hasReview rdf:resource="https://w3id.org/def/airlinereviews#I_hope_they_update_the_A380"/>
+        <isPassenger rdf:resource="https://w3id.org/def/airlinereviews#Alwaleed_Althani"/>
+        <toDestination rdf:resource="https://w3id.org/def/airlinereviews#London_Heathrow"/>
+        <dateFlown>February 2024</dateFlown>
+        <datePublished>2024-02-25</datePublished>
+        <name>Alwaleed Althani</name>
+        <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rating>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Review Author&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Alwaleed Althani</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Another_good_affordable_flight -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Another_good_affordable_flight">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#CommentTitle"/>
+        <name>Another good affordable flight</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Review Comment Title&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Another good affordable flight</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Auckland -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Auckland">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Origin"/>
+        <name>Auckland</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Flight Origin&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Auckland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Australia -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Australia">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Country"/>
+        <name>Australia</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Passenger Country&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Australia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Belfast -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Belfast">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Origin"/>
+        <name>Belfast</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Flight Origin&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Belfast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Boeing_737 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Boeing_737">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Aircraft"/>
+        <hasRyanairAirline rdf:resource="https://w3id.org/def/airlinereviews#Boeing_737"/>
+        <name>Boeing 737</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Aircraft&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Boeing 737</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Boeing_737-800 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Boeing_737-800">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Aircraft"/>
+        <hasRyanairAirline rdf:resource="https://w3id.org/def/airlinereviews#Boeing_737-800"/>
+        <name>Boeing 737-800</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Aircraft&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Boeing 737-800</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Boeing_737-8200 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Boeing_737-8200">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Aircraft"/>
+        <hasRyanairAirline rdf:resource="https://w3id.org/def/airlinereviews#Boeing_737-8200"/>
+        <name>Boeing 737-8200</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Aircraft&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Boeing 737-8200</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Boeing_737Max -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Boeing_737Max">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Aircraft"/>
+        <hasRyanairAirline rdf:resource="https://w3id.org/def/airlinereviews#Boeing_737Max"/>
+        <name>Boeing 737Max</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Aircraft&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Boeing 737Max</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Boeing_737_900 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Boeing_737_900">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Aircraft"/>
+        <hasRyanairAirline rdf:resource="https://w3id.org/def/airlinereviews#Boeing_737_900"/>
+        <name>Boeing 737 900</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Aircraft&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Boeing 737 900</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Boeing_777-300 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Boeing_777-300">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Aircraft"/>
+        <hasQatarAirline rdf:resource="https://w3id.org/def/airlinereviews#Boeing_777-300"/>
+        <name>Boeing 777-300</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Aircraft&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Boeing 777-300</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Brian_English -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Brian_English">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Author"/>
+        <fromOrigin rdf:resource="https://w3id.org/def/airlinereviews#Doha"/>
+        <hasAircraft rdf:resource="https://w3id.org/def/airlinereviews#A380"/>
+        <hasBusinessClass rdf:resource="https://w3id.org/def/airlinereviews#Brian_English"/>
+        <hasCountry rdf:resource="https://w3id.org/def/airlinereviews#Canada"/>
+        <hasReview rdf:resource="https://w3id.org/def/airlinereviews#seat_would_not_stay_up"/>
+        <isPassenger rdf:resource="https://w3id.org/def/airlinereviews#Brian_English"/>
+        <toDestination rdf:resource="https://w3id.org/def/airlinereviews#Montreal"/>
+        <dateFlown>February 2024</dateFlown>
+        <datePublished>2024-02-29</datePublished>
+        <name>Brian English</name>
+        <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rating>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Review Author&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Brian English</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Canada -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Canada">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Country"/>
+        <name>Canada</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Passenger Country&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Canada</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Copenhagen -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Copenhagen">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Origin"/>
+        <name>Copenhagen</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Flight Origin&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Copenhagen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Denmark -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Denmark">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Country"/>
+        <name>Denmark</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Passenger Country&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Denmark</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Doha -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Doha">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Destination"/>
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Origin"/>
+        <name>Doha</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Flight Origin&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Doha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Dublin -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Dublin">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Origin"/>
+        <name>Dublin</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Flight Origin&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Dublin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Dusseldorf -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Dusseldorf">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Origin"/>
+        <name>Dusseldorf</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Flight Origin&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Dusseldorf</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Edinburgh -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Edinburgh">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Origin"/>
+        <name>Edinburgh</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Flight Origin&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Edinburgh</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Faro -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Faro">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Origin"/>
+        <name>Faro</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Flight Origin&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Faro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Frankfurt -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Frankfurt">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Origin"/>
+        <name>Frankfurt</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Flight Origin&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Frankfurt</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Gdansk -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Gdansk">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Destination"/>
+        <name>Gdansk</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Flight Destination&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Gdansk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Germany -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Germany">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Country"/>
+        <name>Germany</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Passenger Country&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Germany</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#I_hope_they_update_the_A380 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#I_hope_they_update_the_A380">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#CommentTitle"/>
+        <name>I hope they update the A380</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Review Comment Title&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">I hope they update the A380</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Israel -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Israel">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Country"/>
+        <name>Israel</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Passenger Country&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Israel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Kilimanjaro_via_Doha -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Kilimanjaro_via_Doha">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Destination"/>
+        <name>Kilimanjaro via Doha</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Flight Destination&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Kilimanjaro via Doha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#London_Heathrow -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#London_Heathrow">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Destination"/>
+        <name>London Heathrow</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Flight Destination&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">London Heathrow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#London_Heathrow_via_Doha -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#London_Heathrow_via_Doha">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Destination"/>
+        <name>London Heathrow via Doha</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Flight Destination&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">London Heathrow via Doha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Luton -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Luton">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Destination"/>
+        <name>Luton</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Flight Destination&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Luton</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Manchester -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Manchester">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Destination"/>
+        <name>Manchester</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Flight Destination&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Manchester</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Mary_Le -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Mary_Le">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Author"/>
+        <fromOrigin rdf:resource="https://w3id.org/def/airlinereviews#Tokyo"/>
+        <hasAircraft rdf:resource="https://w3id.org/def/airlinereviews#A380"/>
+        <hasCountry rdf:resource="https://w3id.org/def/airlinereviews#United_Kingdom"/>
+        <hasEconomyClass rdf:resource="https://w3id.org/def/airlinereviews#Mary_Le"/>
+        <hasReview rdf:resource="https://w3id.org/def/airlinereviews#marred_by_inconveniences"/>
+        <isPassenger rdf:resource="https://w3id.org/def/airlinereviews#Mary_Le"/>
+        <toDestination rdf:resource="https://w3id.org/def/airlinereviews#London_Heathrow_via_Doha"/>
+        <dateFlown>March 2024</dateFlown>
+        <datePublished>2024-03-02</datePublished>
+        <name>Mary Le</name>
+        <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rating>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Review Author&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Mary Le</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Melbourne_via_Doha -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Melbourne_via_Doha">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Destination"/>
+        <name>Melbourne via Doha</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Flight Destination&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Melbourne via Doha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Montreal -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Montreal">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Destination"/>
+        <name>Montreal</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Flight Destination&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Montreal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#New_Delhi -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#New_Delhi">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Origin"/>
+        <name>New Delhi</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Flight Origin&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">New Delhi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Paris_Beauvais -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Paris_Beauvais">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Destination"/>
+        <name>Paris Beauvais</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Flight Destination&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Paris Beauvais</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Perth -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Perth">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Destination"/>
+        <name>Perth</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Flight Destination&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Perth</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Portugal -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Portugal">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Country"/>
+        <name>Portugal</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Passenger Country&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Portugal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Qatar -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Qatar">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Country"/>
+        <name>Qatar</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Passenger Country&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Qatar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#San_Francisco -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#San_Francisco">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Destination"/>
+        <name>San Francisco</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Flight Destination&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">San Francisco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Singapore -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Singapore">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Country"/>
+        <name>Singapore</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Passenger Country&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Singapore</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Tokyo -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Tokyo">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Origin"/>
+        <name>Tokyo</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Flight Origin&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Tokyo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#United_Kingdom -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#United_Kingdom">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Country"/>
+        <name>United Kingdom</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Passenger Country&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">United Kingdom</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#W_Warnock -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#W_Warnock">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Author"/>
+        <fromOrigin rdf:resource="https://w3id.org/def/airlinereviews#Auckland"/>
+        <hasAircraft rdf:resource="https://w3id.org/def/airlinereviews#A350"/>
+        <hasBusinessClass rdf:resource="https://w3id.org/def/airlinereviews#W_Warnock"/>
+        <hasCountry rdf:resource="https://w3id.org/def/airlinereviews#United_Kingdom"/>
+        <hasReview rdf:resource="https://w3id.org/def/airlinereviews#I’d_rate_them_maybe_7/10"/>
+        <isPassenger rdf:resource="https://w3id.org/def/airlinereviews#W_Warnock"/>
+        <toDestination rdf:resource="https://w3id.org/def/airlinereviews#Doha"/>
+        <dateFlown>February 2024</dateFlown>
+        <datePublished>2024-02-22</datePublished>
+        <name>W Warnock</name>
+        <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rating>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Review Author&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">W Warnock</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Wayne_Burgess -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Wayne_Burgess">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#Author"/>
+        <fromOrigin rdf:resource="https://w3id.org/def/airlinereviews#Doha"/>
+        <hasAircraft rdf:resource="https://w3id.org/def/airlinereviews#A380"/>
+        <hasCountry rdf:resource="https://w3id.org/def/airlinereviews#Australia"/>
+        <hasEconomyClass rdf:resource="https://w3id.org/def/airlinereviews#Wayne_Burgess"/>
+        <hasReview rdf:resource="https://w3id.org/def/airlinereviews#no_attempt_to_address_our_complaint"/>
+        <isPassenger rdf:resource="https://w3id.org/def/airlinereviews#Wayne_Burgess"/>
+        <toDestination rdf:resource="https://w3id.org/def/airlinereviews#Perth"/>
+        <dateFlown>November 2023</dateFlown>
+        <datePublished>2024-02-29</datePublished>
+        <name>Wayne Burgess</name>
+        <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rating>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Review Author&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Wayne Burgess</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#a_decent_offering_from_Ryanair -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#a_decent_offering_from_Ryanair">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#CommentTitle"/>
+        <name>a decent offering from Ryanair</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Review Comment Title&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">a decent offering from Ryanair</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#bang_on_time_and_smooth_flights -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#bang_on_time_and_smooth_flights">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#CommentTitle"/>
+        <name>bang on time and smooth flights</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Review Comment Title&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">bang on time and smooth flights</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#cabin_crew_were_welcoming_and_friendly -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#cabin_crew_were_welcoming_and_friendly">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#CommentTitle"/>
+        <name>cabin crew were welcoming and friendly</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Review Comment Title&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">cabin crew were welcoming and friendly</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#marred_by_inconveniences -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#marred_by_inconveniences">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#CommentTitle"/>
+        <name>marred by inconveniences</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Review Comment Title&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">marred by inconveniences</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#no_attempt_to_address_our_complaint -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#no_attempt_to_address_our_complaint">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#CommentTitle"/>
+        <name>no attempt to address our complaint</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Review Comment Title&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">no attempt to address our complaint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#seat_would_not_stay_up -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#seat_would_not_stay_up">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#CommentTitle"/>
+        <name>seat would not stay up</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Review Comment Title&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">seat would not stay up</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#I’d_rate_them_maybe_7/10 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#I’d_rate_them_maybe_7/10">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#CommentTitle"/>
+        <name>I’d rate them maybe 7/10</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Qatar Airways Review Comment Title&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">I’d rate them maybe 7/10</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/airlinereviews#Really_impressed! -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/airlinereviews#Really_impressed!">
+        <rdf:type rdf:resource="https://w3id.org/def/airlinereviews#CommentTitle"/>
+        <name>Really impressed!</name>
+        <rdfs:comment xml:lang="en">An instance that belongs to a class &apos;Ryanair Review Comment Title&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/airlinereviews#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Really impressed!</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/def/airlinereviews#Business"/>
+            <rdf:Description rdf:about="https://w3id.org/def/airlinereviews#FamilyLeisure"/>
+            <rdf:Description rdf:about="https://w3id.org/def/airlinereviews#SoloLeisure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/def/airlinereviews#BusinessClass"/>
+            <rdf:Description rdf:about="https://w3id.org/def/airlinereviews#EconomyClass"/>
+            <rdf:Description rdf:about="https://w3id.org/def/airlinereviews#FirstClass"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/def/airlinereviews#NegativeSentiments"/>
+            <rdf:Description rdf:about="https://w3id.org/def/airlinereviews#NeutralSentiments"/>
+            <rdf:Description rdf:about="https://w3id.org/def/airlinereviews#positiveSentiments"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#rat">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                        <swrl:arguments>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:resource="urn:swrl:var#rat"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/def/airlinereviews#rating"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#rat"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="https://w3id.org/def/airlinereviews#Author"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="urn:swrl:var#rat"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/def/airlinereviews#NegativeSentiments"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                        <swrl:arguments>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:resource="urn:swrl:var#rat"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/def/airlinereviews#rating"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#rat"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="https://w3id.org/def/airlinereviews#Author"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="urn:swrl:var#rat"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/def/airlinereviews#NeutralSentiments"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                        <swrl:arguments>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:resource="urn:swrl:var#rat"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/def/airlinereviews#rating"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#rat"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="https://w3id.org/def/airlinereviews#Author"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="urn:swrl:var#rat"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/def/airlinereviews#positiveSentiments"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
